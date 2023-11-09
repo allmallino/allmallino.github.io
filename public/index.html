@@ -3,10 +3,177 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./style.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 </head>
 <body>
+  <div class="bg-black justify-center items-center text-white py-1.5 flex relative">
+    <span class="text-sm">Sign up and get 20% off to your first order. <a class="underline underline-offset-4 cursor-pointer">Sign Up Now</a></span>
+    <img src="./svg/cross_icon.svg" class="absolute right-6 cursor-pointer"/>
+  </div>
+  <div class="px-24">
+    <header class="flex items-center gap-10 my-6">
+      <h1 class="text-3xl font-black py-1.5">VOODOO.CO</h1>
+      <ul class="flex gap-x-6 ">
+        <li class="flex items-center gap-1">
+          <span>Shop</span>
+          <img src="./svg/arrow_icon_black.svg"/>
+        </li>
+        <li>
+          <span>On Sale</span>
+        </li>
+        <li>
+          <span>New Arrivals</span>
+        </li>
+        <li>
+          <span>Brands</span>
+        </li>
+      </ul>
+      <div class="bg-gray rounded-full h-12 px-3 flex-1 flex items-center">
+        <img src="./svg/search_icon.svg" class="pr-3"/>
+        <input type="search" class="bg-transparent h-full flex-1 py-4" placeholder="Search for products..."/>
+      </div>
+      <div class="flex gap-3.5">
+        <img src="./svg/cart_icon.svg"/>
+        <img src="./svg/user_icon.svg"/>
+      </div>
+    </header>
+      <hr class="text-transparentgray">
+      <ul class="flex gap-3 items-center my-6">
+        <li class="flex gap-1 items-center text-halfgray">
+          <span>Home</span>
+          <img src="./svg/arrow_icon_gray.svg"/>
+          <!--Придумати як змінити колір swg-->
+        </li>
+        <li>
+          <span>Casual</span>
+        </li>
+      </ul>
+    <main class="mt-0.5">
+      <aside class="flex flex-col gap-6 px-6 py-5 border border-transparentgray rounded-2xl w-3/12">
+         <!--Придумати як поставити правільний розмір-->
+          <div class="flex items-center justify-between">  
+              <h3 class="font-bold text-xl">Filters</h3>
+              <img src="./svg/setting_icon.svg"/>
+          </div>
+          <hr class="text-transparentgray">
+
+          <section>
+            <ul class="text-halfgray flex flex-col gap-5">
+              <li class="flex items-center justify-between">
+                <span>T-shirts</span>
+                <img src="./svg/arrow_icon_gray.svg"/>
+              </li>
+              
+              <li class="flex items-center justify-between">
+                <span>Shorts</span>
+                <img src="./svg/arrow_icon_gray.svg"/>
+              </li>
+              
+              <li class="flex items-center justify-between">
+                <span>Shirts</span>
+                <img src="./svg/arrow_icon_gray.svg"/>
+              </li>
+      
+              <li class="flex items-center justify-between">
+                <span>Hoodie</span>
+                <img src="./svg/arrow_icon_gray.svg"/>
+              </li>
+      
+              <li class="flex items-center justify-between">
+                <span>Jeans</span>
+                <img src="./svg/arrow_icon_gray.svg"/>
+              </li>
+            </ul>
+          </section>
     
+        <hr class="text-transparentgray">
+
+          <section>
+            <div class="flex items-center justify-between">  
+              <h3 class="font-bold text-xl">Price</h3>
+              <img src="./svg/arrow_icon_black.svg" class="rotate-180"/>
+            </div>
+            <!--Перетягувач ціни-->
+          </section>
+
+          <hr class="text-transparentgray">
+    
+          <section class="flex flex-col gap-5">
+            <div class="flex items-center justify-between">  
+              <h3 class="font-bold text-xl">Colors</h3>
+              <img src="./svg/arrow_icon_black.svg" class="rotate-180"/>
+            </div>
+            <div class="flex flex-col gap-4">
+              <div class="flex justify-between">
+                <div class="bg-green border border-transparentgray rounded-full inline-block w-9 h-9"></div>
+                <div class="bg-red border border-transparentgray rounded-full inline-block w-9 h-9"></div>
+                <div class="bg-yellow border border-transparentgray rounded-full inline-block w-9 h-9"></div>
+                <div class="bg-orange border border-transparentgray rounded-full inline-block w-9 h-9"></div>
+                <div class="bg-azure border border-transparentgray rounded-full inline-block w-9 h-9"></div>
+              </div>
+              <div class="flex justify-between">
+                <div class="bg-blue border border-transparentgray rounded-full w-9 h-9 flex items-center justify-center">
+                  <img src="./svg/check_icon.svg"/>
+                </div>
+                <div class="bg-purple border border-transparentgray rounded-full inline-block w-9 h-9"></div>
+                <div class="bg-pink border border-transparentgray rounded-full inline-block w-9 h-9"></div>
+                <div class="bg-white border border-transparentgray rounded-full inline-block w-9 h-9"></div>
+                <div class="bg-black border border-transparentgray rounded-full inline-block w-9 h-9"></div>
+              </div>
+            </div>
+          </section>
+
+          <hr class="text-transparentgray">
+          
+          <section class="flex flex-col gap-5">
+            <div class="flex items-center justify-between">  
+              <h3 class="font-bold text-xl">Size</h3>
+              <img src="./svg/arrow_icon_black.svg" class="rotate-180"/>
+            </div>
+            <div class="text-halfgray text-sm flex gap-2 flex-wrap">
+              <span class="py-2.5 px-5 bg-gray rounded-full">XX-Small</span>
+              <span class="py-2.5 px-5 bg-gray rounded-full">X-Small</span>
+              <span class="py-2.5 px-5 bg-gray rounded-full">Small</span>
+              <span class="py-2.5 px-5 bg-gray rounded-full">Medium</span>
+              <span class="py-2.5 px-5 bg-black text-white rounded-full">Large</span>
+              <span class="py-2.5 px-5 bg-gray rounded-full">X-Large</span>
+              <span class="py-2.5 px-5 bg-gray rounded-full">XX-Large</span>
+              <span class="py-2.5 px-5 bg-gray rounded-full">3X-Large</span>
+              <span class="py-2.5 px-5 bg-gray rounded-full">4X-Large</span>
+            </div>
+          </section>
+
+          <hr class="text-transparentgray">
+    
+          <section class="flex flex-col gap-5">
+            <div class="flex items-center justify-between">  
+              <h3 class="font-bold text-xl">Dress Style</h3>
+              <img src="./svg/arrow_icon_black.svg" class="rotate-180"/>
+            </div>
+            <ul class="text-halfgray flex flex-col gap-5">
+              <li class="flex items-center justify-between">
+                <span>Casual</span>
+                <img src="./svg/arrow_icon_gray.svg"/>
+              </li>
+              <li class="flex items-center justify-between">
+                <span>Formal</span>
+                <img src="./svg/arrow_icon_gray.svg"/>
+              </li>
+              <li class="flex items-center justify-between">
+                <span>Party</span>
+                <img src="./svg/arrow_icon_gray.svg"/>
+              </li>
+              <li class="flex items-center justify-between">
+                <span>Gym</span>
+                <img src="./svg/arrow_icon_gray.svg"/>
+              </li>
+            </ul>
+          </section>
+          <button class="rounded-full bg-black text-white py-4 text-sm mb-6">Apply Filter</button>
+      </aside>
+    </main>
+  
+  </div>
   <script src="./app.js"></script>
 </body>
 </html>
