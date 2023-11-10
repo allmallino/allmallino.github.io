@@ -18,6 +18,10 @@ module.exports = {
         'purple':'#7D06F5',
         'pink':'#F506A4',
       },
+      fontFamily:{
+        logo:['Avenir'],
+        body:['Plus Jakarta Sans', 'sans-serif'],
+      }
     },
   },
   plugins: [],

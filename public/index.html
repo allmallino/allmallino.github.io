@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="style.css" rel="stylesheet">
 </head>
-<body>
+<body class="font-body">
   <div class="bg-black justify-center items-center text-white py-1.5 flex relative">
     <span class="text-sm">Sign up and get 20% off to your first order. <a class="underline underline-offset-4 cursor-pointer">Sign Up Now</a></span>
     <img src="./svg/cross_icon.svg" class="absolute right-6 cursor-pointer"/>
   </div>
   <div class="px-24">
     <header class="flex items-center gap-10 my-6">
-      <h1 class="text-3xl font-black py-1.5">VOODOO.CO</h1>
+      <h1 class="text-3xl font-black py-1.5 font-logo">VOODOO.CO</h1>
       <ul class="flex gap-x-6 ">
         <li class="flex items-center gap-1">
           <span>Shop</span>
@@ -28,9 +28,9 @@
           <span>Brands</span>
         </li>
       </ul>
-      <div class="bg-gray rounded-full h-12 px-3 flex-1 flex items-center">
+      <div class="bg-gray rounded-full h-12 px-4 flex-1 flex items-center">
         <img src="./svg/search_icon.svg" class="pr-3"/>
-        <input type="search" class="bg-transparent h-full flex-1 py-4" placeholder="Search for products..."/>
+        <input type="search" class="bg-transparent h-full flex-1 py-3" placeholder="Search for products..."/>
       </div>
       <div class="flex gap-3.5">
         <img src="./svg/cart_icon.svg"/>
@@ -49,7 +49,7 @@
         </li>
       </ul>
     <main class="mt-0.5">
-      <aside class="flex flex-col gap-6 px-6 py-5 border border-transparentgray rounded-2xl w-3/12">
+      <aside class="flex flex-col gap-6 px-6 py-5 border border-transparentgray rounded-2xl w-3/12 float-left mb-10">
          <!--Придумати як поставити правільний розмір-->
           <div class="flex items-center justify-between">  
               <h3 class="font-bold text-xl">Filters</h3>
@@ -171,9 +171,83 @@
           </section>
           <button class="rounded-full bg-black text-white py-4 text-sm mb-6">Apply Filter</button>
       </aside>
+      <div>
+        <!---->
+      </div>
+      <div class="bg-black rounded-2xl text-white clear-left px-16 py-9 flex justify-between items-center relative z-10">
+        <h1 class="text-4xl w-6/12">STAY UPTO DATE ABOUT OUR LATEST OFFERS</h1>
+        <div class="flex flex-col gap-3.5 w-80">
+          <div class="bg-gray rounded-full h-11 px-4 flex-1 flex items-center">
+            <img src="./svg/letter_icon.svg" class="pr-3"/>
+            <input type="search" class="bg-transparent h-full flex-1 py-3" placeholder="Enter your email address"/>
+          </div>
+          <button class="bg-gray rounded-full px-4 py-3 flex w-full text-black items-center justify-center">Subscribe to Newsletter</button>
+        </div>
+      </div>
     </main>
-  
   </div>
+  <footer class="bg-gray w-screen -mt-24 px-24 pt-36 pb-20">
+    <div class="flex justify-between">
+      <section class="flex flex-col w-64 justify-between">
+        <div class="flex flex-col gap-6">
+          <h1 class="text-3xl font-black font-logo">VOODOO.CO</h1>
+          <span class="text-halfgray text-sm">We have clothes that suits your style and which you’re proud to wear. From women to men.</span>
+        </div>
+        <img src="./svg/social.svg" class="h-7 inline-block w-36"/>
+      </section>
+
+      <section class="flex flex-col gap-6">
+        <h4>COMPANY</h4>
+        <ul class="text-halfgray flex flex-col gap-3.5">
+          <li>About</li>
+          <li>Features</li>
+          <li>Works</li>
+          <li>Career</li>
+        </ul>
+      </section>
+      
+      <section class="flex flex-col gap-6">
+        <h4>HELP</h4>
+        <ul class="text-halfgray flex flex-col gap-3.5">
+          <li>Customer Support</li>
+          <li>Delivery Details</li>
+          <li>Terms & Conditions</li>
+          <li>Privacy Policy</li>
+        </ul>
+      </section>
+      
+      <section class="flex flex-col gap-6">
+        <h4>FAQ</h4>
+        <ul class="text-halfgray flex flex-col gap-3.5">
+          <li>Account</li>
+          <li>Manage Deliveries</li>
+          <li>Orders</li>
+          <li>Payments</li>
+        </ul>
+      </section>
+      
+      <section class="flex flex-col gap-6">
+        <h4>RESOURCES</h4>
+        <ul class="text-halfgray flex flex-col gap-3.5">
+          <li>Free eBooks</li>
+          <li>Development Tutorial</li>
+          <li>How to - Blog</li>
+          <li>Youtube Playlist</li>
+        </ul>
+      </section>
+    </div>
+    <hr class="text-transparentgray mt-12 mb-5">
+    <div class="flex justify-between items-center">
+      <span class="text-halfgray text-sm">Shop.co © 2000-2023, All Rights Reserved</span>
+      <div class="flex gap-3 items-baseline h-8 overflow-hidden">
+        <img src="./svg/visa_icon.svg" class="-mt-1.5"/>
+        <img src="./svg/mastercard_icon.svg" class="-mt-1.5"/>
+        <img src="./svg/paypal_icon.svg" class="-mt-1.5"/>
+        <img src="./svg/applepay_icon.svg" class="-mt-1.5"/>
+        <img src="./svg/googlepay_icon.svg" class="-mt-1.5"/>
+      </div>
+    </div>
+  </footer>
   <script src="./app.js"></script>
 </body>
 </html>
