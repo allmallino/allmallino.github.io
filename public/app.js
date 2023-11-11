@@ -1,16 +1,12 @@
-async function getProducts(page = 0) {
+async function getProducts(page = 1) {
     let limit =window.innerWidth>=1280?9:6;
-    var products = await fetch('https://voodoo-sandbox.myshopify.com/products.json?limit='+limit)
+    var products = await fetch('https://voodoo-sandbox.myshopify.com/products.json?limit='+limit+"&page="+page)
     .then(response => response.json())
     .then(data => { return data.products });
     console.log(products);
 
-    var ratings = await fetch('https://voodoo-sandbox.myshopify.com/products.json?limit=9')
-    .then(response => response.json());
-
-    console.log(ratings);
-
-    let table = document.getElementById("table")
+    let table = document.getElementById("table");
+    table.innerHTML="";
     let fragment = document.createDocumentFragment();
     for(let i=0; i<products.length; i++){
         let product = products[i];
@@ -62,23 +58,76 @@ async function getProducts(page = 0) {
         fragment.appendChild(article);
     }
     table.appendChild(fragment);
-
+    renderPage(page);
 }
 
-/*
-<article>
-  <img src="./shopify_image.png" class="w-72 h-72 rounded-3xl mb-4"/>
-  <h4 class="text-xl font-bold mb-2.5">Gradient Graphic T-shirt</h4>
-  <div class="flex gap-3 mb-2.5">
-    <div class="flex gap-1">
-      <img src="./svg/full_star_icon.svg"/>
-      <img src="./svg/full_star_icon.svg"/>
-      <img src="./svg/full_star_icon.svg"/>
-      <img src="./svg/half_star_icon.svg"/>
-    </div>
-    <span class="text-sm">3.5/<span class="text-halfgray">5</span></span>
-  </div>
-  <h3 class="text-2xl font-bold">$145</h3>
-</article>
-*/
+
+function createTableLi(cf, options) {
+  let li = document.createElement('li');
+  let a = document.createElement('a');
+  a.href = "#label";
+  a.className = options.cl;
+  a.text = options.txt;
+  a.onclick = cf;
+  li.append(a);
+  return li;
+}
+
+function renderPage(index=1){
+  let pageList = document.getElementById("page_list");
+  pageList.innerHTML = "";
+  let fragmet = document.createDocumentFragment();
+  let limit = window.innerWidth>=1280?9:6;
+  let count = Math.ceil(461.0/limit);
+  document.getElementById("prevBtn").onclick=()=>{getProducts(Math.max(index-1,1));};
+  document.getElementById("nextBtn").onclick=()=>{getProducts(Math.min(index+1,count));};
+  let points;
+  if(index == count || index + 1 == count){
+    for (let i = 1; i <= 2+Math.floor(limit/9); i++) {
+      fragmet.append(createTableLi(() => getProducts(i), { cl: "rounded-lg flex items-center justify-center xl:w-10 xl:h-10 w-9 h-9 ", txt: i }));
+    }
+    points = document.createElement('li');
+    points.textContent = "...";
+    points.className="rounded-lg flex items-center justify-center xl:w-10 xl:h-10 w-9 h-9";
+    fragmet.append(points);
+    
+    for (let i = count-1-Math.floor(limit/9); i <= count; i++) {
+      let selected = i === index  ? "text-black bg-lightblack" : "";
+      fragmet.append(createTableLi(() => getProducts(i), { cl: "rounded-lg flex items-center justify-center xl:w-10 xl:h-10 w-9 h-9 "+ selected, txt: i}));
+    }
+  }
+  else if (index > 2) {
+    fragmet.append(createTableLi(() => getProducts(1), { cl: "rounded-lg flex items-center justify-center xl:w-10 xl:h-10 w-9 h-9", txt: "1" }));
+    points = document.createElement('li');
+    points.textContent = "...";
+    points.className="rounded-lg flex items-center justify-center xl:w-10 xl:h-10 w-9 h-9";
+    fragmet.append(points);
+    for (let i = -Math.floor(limit/9); i <= Math.floor(limit/9) && i + index <= count; i++) {
+      let selected = i === 0  ? "text-black bg-lightblack" : "";
+      fragmet.append(createTableLi(() => getProducts(i + index), { cl: "rounded-lg flex items-center justify-center xl:w-10 xl:h-10 w-9 h-9 "+ selected, txt: i + index }));
+    }
+    points = document.createElement('li');
+    points.textContent = "...";
+    points.className="rounded-lg flex items-center justify-center xl:w-10 xl:h-10 w-9 h-9";
+    fragmet.append(points);
+    fragmet.append(createTableLi(() => getProducts(count), { cl: "rounded-lg flex items-center justify-center xl:w-10 xl:h-10 w-9 h-9", txt: count }));
+  }
+  else {
+      for (let i = 1; i <= 2+Math.floor(limit/9); i++) {
+        let selected = i === index ? "text-black bg-lightblack" : "";
+        fragmet.append(createTableLi(() => getProducts(i), { cl: "rounded-lg flex items-center justify-center xl:w-10 xl:h-10 w-9 h-9 "+ selected, txt: i }));
+      }
+      
+      points = document.createElement('li');
+      points.textContent = "...";
+      points.className="rounded-lg flex items-center justify-center xl:w-10 xl:h-10 w-9 h-9";
+      fragmet.append(points);
+
+      for (let i = count-1-Math.floor(limit/9); i <= count; i++) {
+        fragmet.append(createTableLi(() => getProducts(i), { cl: "rounded-lg flex items-center justify-center xl:w-10 xl:h-10 w-9 h-9", txt: i }));
+      }
+  }
+  pageList.append(fragmet);
+}
+
 getProducts();

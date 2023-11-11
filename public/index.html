@@ -179,7 +179,7 @@
           <button class="rounded-full bg-black text-white py-4 text-sm mb-6 font-medium">Apply Filter</button>
       </aside>
       <div class="overflow-hidden mb-20">
-        <div class="flex justify-between items-center">
+        <div id="label" class="flex justify-between items-center">
           <div class="flex xl:justify-between gap-1 xl:gap-0 xl:w-full items-end">
             <h2 class="xl:text-3xl text-2xl font-bold">Casual</h2>
             <div class="text-halfgray flex gap-3 items-center mb-1 text-sm xl:text-base">
@@ -200,35 +200,15 @@
         </div>
         <hr class="text-transparentgray my-5">
         <div class="flex items-center justify-between text-sm">
-          <button class="text-xs xl:text-base flex items-center gap-2 py-2 xl:px-3.5 px-2 rounded-lg border border-transparentgray">
+          <button id="prevBtn" class="text-xs xl:text-base flex items-center gap-2 py-2 xl:px-3.5 px-2 rounded-lg border border-transparentgray">
             <img src="./svg/arrow_point_icon.svg" class="w-4 xl:w-5 h-4 xl:h-5"/>
             <span>Previous</span>
           </button>
-          <ul class="text-xs xl:text-base text-halfblack flex xl:gap-0.5">
-            <li class="rounded-lg flex items-center justify-center xl:w-10 xl:h-10 w-9 h-9 text-black bg-lightblack">
-              1
-            </li>
-            <li class="rounded-lg flex items-center justify-center xl:w-10 xl:h-10 w-9 h-9">
-              2
-            </li>
-            <li class="hidden rounded-lg xl:flex items-center justify-center w-10 h-10">
-              3
-            </li>
-            <li class="rounded-lg flex items-center justify-center xl:w-10 xl:h-10 w-9 h-9">
-              ...
-            </li>
-            <li class="hidden rounded-lg xl:flex items-center justify-center w-10 h-10">
-              8
-            </li>
-            <li class="rounded-lg flex items-center justify-center xl:w-10 xl:h-10 w-9 h-9">
-              9
-            </li>
-            <li class="rounded-lg flex items-center justify-center xl:w-10 xl:h-10 w-9 h-9">
-              10
-            </li>
+          <ul id="page_list" class="text-xs xl:text-base text-halfblack flex xl:gap-0.5">
+            
           </ul>
 
-          <button class="text-xs xl:text-base flex items-center gap-2 py-2 px-3.5 rounded-lg border border-transparentgray">
+          <button id="nextBtn" class="text-xs xl:text-base flex items-center gap-2 py-2 px-3.5 rounded-lg border border-transparentgray">
             <span>Next</span>
             <img src="./svg/arrow_point_icon.svg" class="w-4 xl:w-5 h-4 xl:h-5 rotate-180"/>
           </button>
