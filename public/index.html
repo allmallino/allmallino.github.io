@@ -6,77 +6,47 @@
   <link href="style.css" rel="stylesheet">
 </head>
 <body class="font-body">
-  <div id="pop-up" class="flex w-screen fixed bg-halfblack z-20 items-center justify-center" onmouseover="document.body.style.overflow='hidden';"  onmouseout="document.body.style.overflow='auto';">
-    <div class="bg-white rounded-3xl w-11/12 pt-3.5 pb-7 xl:py-8 px-3 xl:px-9 h-screen overflow-auto relative">
-      <button class="float-right xl:mb-7 xl:static absolute top-6 right-7 z-10" onclick="document.getElementById('pop-up').classList.replace('flex','hidden')">
-        <img src="./svg/cross_icon_black.svg" class="xl:w-9 xl:h-9 w-5 h-5"/>
+  <div id="pop-up" class="hidden w-screen fixed bg-halfblack z-20 items-center justify-center" onmouseover="document.body.style.overflow='hidden';"  onmouseout="document.body.style.overflow='auto';">
+    <div class="bg-white rounded-3xl w-11/12 pt-3.5 pb-7 lg:py-8 px-3 lg:px-9 h-screen overflow-auto relative">
+      <button class="float-right lg:mb-7 lg:static absolute top-6 right-7 z-10" onclick="document.getElementById('pop-up').classList.replace('flex','hidden')">
+        <img src="./svg/cross_icon_black.svg" class="lg:w-9 lg:h-9 w-5 h-5"/>
       </button>
-      <div class="xl:px-3.5 xl:clear-right">
-        <section class="flex xl:flex-row flex-col xl:gap-5 gap-7 items-center">
-          <img id="image" src="./images/shopify_image.png" class="rounded-2xl xl:w-[505px] xl:h-[510px] w-full h-72 object-cover box-border"/>
+      <div class="lg:px-3.5 lg:clear-right">
+        <section class="flex lg:flex-row flex-col lg:gap-5 gap-7 items-center">
+          <img id="image" class="rounded-2xl lg:w-[505px] lg:h-[510px] w-full h-72 object-cover box-border"/>
           <div class="w-full">
-            <h2 id="name" class="xl:mb-2.5 mb-3 text-2xl xl:text-4xl leading-7 xl:leading-none font-black">One Life Graphic T-shirt</h2>
-            <div id="rating" class="flex gap-4 mb-3 xl:mb-3.5 text-sm xl:text-base">
-              <div class="flex xl:gap-2 gap-1.5">
-                <img src="./svg/full_star_icon.svg"/>
-                <img src="./svg/full_star_icon.svg"/>
-                <img src="./svg/full_star_icon.svg"/>
-                <img src="./svg/half_star_icon.svg"/>
-              </div>
-              <span>3.5/<span class="text-halfgray">5</span></span>
+            <h2 id="name" class="lg:mb-2.5 mb-3 text-2xl lg:text-4xl leading-7 lg:leading-none font-black"></h2>
+            <div id="rating" class="flex gap-4 mb-3 lg:mb-3.5 text-sm lg:text-base">
             </div>
-            <div class="flex xl:gap-2 gap-2.5 items-center mb-5 xl:mb-6">
-              <div class="flex xl:gap-3 gap-2.5 items-center text-2xl xl:text-3xl font-bold flex-wrap">
-                <span id="price">$260</span>
-                <span id="oldprice" class="text-gray30% line-through decoration-2 flex">$300</span>
+            <div class="flex lg:gap-2 gap-2.5 items-center mb-5 lg:mb-6">
+              <div class="flex lg:gap-3 gap-2.5 items-center text-2xl lg:text-3xl font-bold flex-wrap">
+                <span id="price"></span>
+                <span id="oldprice" class="text-gray30% line-through decoration-2 flex"></span>
               </div>
-              <span id="discount" class="text-sm xl:text-base bg-lightred text-textred px-3 xl:px-3.5 py-1.5 rounded-full leading-5 font-medium flex">
-                -40%
-              </span>
+              <span id="discount" class="text-sm lg:text-base bg-lightred text-textred px-3 lg:px-3.5 py-1.5 rounded-full leading-5 font-medium flex"></span>
             </div>
-            <span id="description" class="xl:leading-snug leading-5 xl:text-base text-sm text-halfgray">This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.</span>
+            <span id="description" class="lg:leading-snug leading-5 lg:text-base text-sm text-halfgray"></span>
             <hr class="text-transparentgray my-6">
             <div id="variants">
-              <div>
-                <span class="text-halfgray">Select Colors</span>
-                <div id="colors" class="flex gap-4 mt-4">
-                  <div class="bg-blue border border-transparentgray rounded-full w-9 h-9 flex items-center justify-center">
-                    <img src="./svg/check_icon.svg"/>
-                  </div>
-                  <div class="bg-purple border border-transparentgray rounded-full inline-block w-9 h-9"></div>
-                  <div class="bg-pink border border-transparentgray rounded-full inline-block w-9 h-9"></div>
-                </div>
-              </div>
-              <hr class="text-transparentgray my-6">
-              <div class="text-halfgray">
-                <span class="text-halfgray">Choose Size</span>
-                <div id="sizes" class="flex gap-3 flex-wrap mt-4 leading-5">
-                  <span class="py-3 px-6 bg-gray rounded-full">Small</span>
-                  <span class="py-3 px-6 bg-gray rounded-full">Medium</span>
-                  <span class="py-3 px-6 bg-black text-white rounded-full">Large</span>
-                  <span class="py-3 px-6 bg-gray rounded-full">X-Large</span>
-                </div>
-              </div>
-              <hr class="text-transparentgray my-6">
             </div>
             
-            <div class="flex gap-3 xl:gap-5">
-              <div class="flex items-center gap-4 xl:gap-0 xl:justify-between py-3 xl:py-3.5 px-4 xl:px-5 bg-gray rounded-full xl:w-[170px]">
-                <button>
+            <div class="flex gap-3 lg:gap-5">
+              <div class="flex items-center gap-4 lg:gap-0 lg:justify-between py-3 lg:py-3.5 px-4 lg:px-5 bg-gray rounded-full lg:w-[170px]">
+                <button onclick="document.getElementById('num').textContent=Math.max(parseInt(document.getElementById('num').textContent)-1,1)">
                   <img src="./svg/minus_icon.svg"/>
                 </button>
-                <span class="text-sm xl:text-base xl:leading-5">1</span>
-                <button>
+                <span id="num" class="text-sm lg:text-base lg:leading-5">1</span>
+                <button onclick="document.getElementById('num').textContent=parseInt(document.getElementById('num').textContent)+1">
                   <img src="./svg/plus_icon.svg"/>
                 </button>
               </div>
-              <button id="buybutton" class="flex items-center justify-center py-3.5 px-14 bg-black disabled:bg-halfgray rounded-full text-white flex-1 text-sm xl:text-base">Add to Cart</button>
+              <button id="buybutton" class="flex items-center justify-center py-3.5 px-14 bg-black disabled:bg-halfgray rounded-full text-white flex-1 text-sm lg:text-base">Add to Cart</button>
             </div>
           </div>
         </section>
-        <section class="mt-20 xl:mt-32">
-          <h2 class="xl:mb-7 mb-5 xl:text-4xl text-2xl leading-9 xl:leading-none font-black">You may also like</h2>
-          <div id="recommendation" class="flex overflow-x-auto xl:gap-5 gap-4 w-full items-start pb-4">
+        <section class="mt-20 lg:mt-32">
+          <h2 class="lg:mb-7 mb-5 lg:text-4xl text-2xl leading-9 lg:leading-none font-black">You may also like</h2>
+          <div id="recommendation" class="flex overflow-x-auto lg:gap-5 gap-4 w-full items-start pb-4">
           </div>
         </section>
       </div>
@@ -87,11 +57,11 @@
     <img src="./svg/cross_icon.svg" class="hidden md:block absolute right-6 cursor-pointer"/>
   </div>
 
-  <div class="px-4 xl:px-24">
-    <header class="flex items-center xl:gap-10 gap-4 my-6">
-      <img src="./svg/menu_icon.svg" class="xl:hidden"/>
-      <h1 class="text-2xl xl:text-3xl font-black xl:py-1.5 mr-10 xl:mr-0 font-logo">VOODOO.CO</h1>
-      <ul class="xl:flex xl:gap-x-6 hidden">
+  <div class="px-4 lg:px-24">
+    <header class="flex items-center lg:gap-10 gap-4 my-6">
+      <img src="./svg/menu_icon.svg" class="lg:hidden"/>
+      <h1 class="text-2xl lg:text-3xl font-black lg:py-1.5 mr-10 lg:mr-0 font-logo">VOODOO.CO</h1>
+      <ul class="lg:flex lg:gap-x-6 hidden">
         <li class="flex items-center gap-1">
           <span>Shop</span>
           <img src="./svg/arrow_icon_black.svg"/>
@@ -106,18 +76,18 @@
           <span>Brands</span>
         </li>
       </ul>
-      <div class="hidden bg-gray rounded-full h-12 xl:px-4 xl:flex-1 xl:flex items-center">
+      <div class="hidden bg-gray rounded-full h-12 lg:px-4 lg:flex-1 lg:flex items-center">
         <img src="./svg/search_icon.svg" class="pr-3"/>
         <input type="search" class="bg-transparent h-full flex-1 py-3" placeholder="Search for products..."/>
       </div>
-      <div class="flex xl:gap-3.5 gap-3">
-        <img src="./svg/search_icon_black.svg" class="xl:hidden"/>
+      <div class="flex lg:gap-3.5 gap-3">
+        <img src="./svg/search_icon_black.svg" class="lg:hidden"/>
         <img src="./svg/cart_icon.svg"/>
         <img src="./svg/user_icon.svg"/>
       </div>
     </header>
       <hr class="text-transparentgray">
-      <ul class="flex xl:gap-3 gap-1 items-center xl:my-6 mt-5 mb-3.5 text-sm xl:text-base">
+      <ul class="flex lg:gap-3 gap-1 items-center lg:my-6 mt-5 mb-3.5 text-sm lg:text-base">
         <li class="flex gap-1 items-center text-halfgray">
           <span>Home</span>
           <img src="./svg/arrow_icon_gray.svg"/>
@@ -127,7 +97,7 @@
         </li>
       </ul>
     <main class="mt-0.5">
-      <aside class="hidden xl:flex flex-col gap-6 xl:px-6 xl:py-5 border border-transparentgray rounded-2xl w-72 float-left mb-10 mr-5">
+      <aside class="hidden lg:flex flex-col gap-6 lg:px-6 lg:py-5 border border-transparentgray rounded-2xl w-72 float-left mb-10 mr-5">
           <div class="flex items-center justify-between">  
               <h3 class="font-bold text-xl">Filters</h3>
               <img src="./svg/setting_icon.svg"/>
@@ -256,43 +226,43 @@
       </aside>
       <div class="overflow-hidden mb-20">
         <div id="label" class="flex justify-between items-center">
-          <div class="flex xl:justify-between gap-1 xl:gap-0 xl:w-full items-end">
-            <h2 class="xl:text-3xl text-2xl font-bold">Casual</h2>
-            <div class="text-halfgray flex gap-3 items-center mb-1 text-sm xl:text-base">
+          <div class="flex lg:justify-between gap-1 lg:gap-0 lg:w-full items-end">
+            <h2 class="lg:text-3xl text-2xl font-bold">Casual</h2>
+            <div class="text-halfgray flex gap-3 items-center mb-1 text-sm lg:text-base">
               <span>Showing 1-10 of 100 Products</span>
-              <div class="hidden xl:flex gap-1 items-center">
+              <div class="hidden lg:flex gap-1 items-center">
                 <span>Sort by: <span class="text-black font-medium">Most Popular</span></span>
                 <img src="./svg/arrow_icon_black.svg"/>
               </div>
             </div>
           </div>
-          <button class="p-2 w-8 rounded-full bg-gray xl:hidden">
+          <button class="p-2 w-8 rounded-full bg-gray lg:hidden">
             <img src="./svg/settings_icon_black.svg"/>
           </button>
         </div>
 
-        <div id="table" class="grid gap-x-1.5 xl:gap-x-5 gap-y-9 xl:grid-cols-3 grid-cols-2 grid-rows-3 mt-4 xl:mb-3 mb-1.5 place-items-stretch place-content-stretch">
+        <div id="table" class="grid gap-x-1.5 lg:gap-x-5 gap-y-9 lg:grid-cols-3 grid-cols-2 grid-rows-3 mt-4 lg:mb-3 mb-1.5 place-items-stretch place-content-stretch">
           
         </div>
         <hr class="text-transparentgray my-5">
         <div class="flex items-center justify-between text-sm">
-          <button id="prevBtn" class="text-xs xl:text-base flex items-center gap-2 py-2 xl:px-3.5 px-2 rounded-lg border border-transparentgray">
-            <img src="./svg/arrow_point_icon.svg" class="w-4 xl:w-5 h-4 xl:h-5"/>
+          <button id="prevBtn" class="text-xs lg:text-base flex items-center gap-2 py-2 lg:px-3.5 px-2 rounded-lg border border-transparentgray">
+            <img src="./svg/arrow_point_icon.svg" class="w-4 lg:w-5 h-4 lg:h-5"/>
             <span>Previous</span>
           </button>
-          <ul id="page_list" class="text-xs xl:text-base text-halfblack flex xl:gap-0.5">
+          <ul id="page_list" class="text-xs lg:text-base text-halfblack flex lg:gap-0.5">
 
           </ul>
 
-          <button id="nextBtn" class="text-xs xl:text-base flex items-center gap-2 py-2 px-3.5 rounded-lg border border-transparentgray">
+          <button id="nextBtn" class="text-xs lg:text-base flex items-center gap-2 py-2 px-3.5 rounded-lg border border-transparentgray">
             <span>Next</span>
-            <img src="./svg/arrow_point_icon.svg" class="w-4 xl:w-5 h-4 xl:h-5 rotate-180"/>
+            <img src="./svg/arrow_point_icon.svg" class="w-4 lg:w-5 h-4 lg:h-5 rotate-180"/>
           </button>
         </div>
       </div>
-      <div class="bg-black rounded-2xl text-white clear-left xl:px-16 px-6 xl:py-9 pt-8 pb-7 flex flex-col xl:flex-row xl:justify-between gap-8 xl:gap-0 xl:items-center relative z-10">
-        <h1 class="xl:text-4xl text-3xl xl:w-6/12 xl:font-light font-black leading-tight">STAY UPTO DATE ABOUT OUR LATEST OFFERS</h1>
-        <div class="flex flex-col xl:gap-3.5 gap-3 xl:w-80 w-full text-sm xl:text-base">
+      <div class="bg-black rounded-2xl text-white clear-left lg:px-16 px-6 lg:py-9 pt-8 pb-7 flex flex-col lg:flex-row lg:justify-between gap-8 lg:gap-0 lg:items-center relative z-10">
+        <h1 class="lg:text-4xl text-3xl lg:w-6/12 lg:font-light font-black leading-tight">STAY UPTO DATE ABOUT OUR LATEST OFFERS</h1>
+        <div class="flex flex-col lg:gap-3.5 gap-3 lg:w-80 w-full text-sm lg:text-base">
           <div class="bg-gray rounded-full h-6 px-4 flex-1 flex items-center">
             <img src="./svg/letter_icon.svg" class="pr-3"/>
             <input type="search" class="bg-transparent h-full flex-1 py-3" placeholder="Enter your email address"/>
@@ -302,17 +272,17 @@
       </div>
     </main>
   </div>
-  <footer class="bg-gray w-screen xl:-mt-24 -mt-44 px-4 xl:px-24 xl:pt-36 pt-52 xl:pb-20 pb-7">
-    <div class="xl:flex xl:justify-between xl:flex-row grid grid-cols-2 gap-y-10">
-      <section class="flex flex-col gap-5 xl:w-64 xl:justify-between xl:gap-0 col-span-2">
-        <div class="flex flex-col xl:gap-6 gap-3.5">
-          <h1 class="text-2xl xl:text-3xl font-black font-logo">VOODOO.CO</h1>
+  <footer class="bg-gray w-screen lg:-mt-24 -mt-44 px-4 lg:px-24 lg:pt-36 pt-52 lg:pb-20 pb-7">
+    <div class="lg:flex lg:justify-between lg:flex-row grid grid-cols-2 gap-y-10">
+      <section class="flex flex-col gap-5 lg:w-64 lg:justify-between lg:gap-0 col-span-2">
+        <div class="flex flex-col lg:gap-6 gap-3.5">
+          <h1 class="text-2xl lg:text-3xl font-black font-logo">VOODOO.CO</h1>
           <span class="text-halfgray text-sm">We have clothes that suits your style and which you’re proud to wear. From women to men.</span>
         </div>
         <img src="./svg/social.svg" class="h-7 inline-block w-36"/>
       </section>
 
-      <section class="flex flex-col gap-6 text-sm xl:text-base">
+      <section class="flex flex-col gap-6 text-sm lg:text-base">
         <h4>COMPANY</h4>
         <ul class="text-halfgray flex flex-col gap-3.5 leading-5">
           <li>About</li>
@@ -322,7 +292,7 @@
         </ul>
       </section>
       
-      <section class="flex flex-col gap-6 text-sm xl:text-base">
+      <section class="flex flex-col gap-6 text-sm lg:text-base">
         <h4>HELP</h4>
         <ul class="text-halfgray flex flex-col gap-3.5 leading-5">
           <li>Customer Support</li>
@@ -332,7 +302,7 @@
         </ul>
       </section>
       
-      <section class="flex flex-col gap-6 text-sm xl:text-base">
+      <section class="flex flex-col gap-6 text-sm lg:text-base">
         <h4>FAQ</h4>
         <ul class="text-halfgray flex flex-col gap-3.5 leading-5">
           <li>Account</li>
@@ -342,7 +312,7 @@
         </ul>
       </section>
       
-      <section class="flex flex-col gap-6 text-sm xl:text-base">
+      <section class="flex flex-col gap-6 text-sm lg:text-base">
         <h4>RESOURCES</h4>
         <ul class="text-halfgray flex flex-col gap-3.5 leading-5">
           <li>Free eBooks</li>
@@ -353,9 +323,9 @@
       </section>
     </div>
     <hr class="text-transparentgray mt-12 mb-5">
-    <div class="flex xl:justify-between items-center xl:flex-row flex-col justify-center gap-4 xl:gap-0">
+    <div class="flex lg:justify-between items-center lg:flex-row flex-col justify-center gap-4 lg:gap-0">
       <span class="text-halfgray text-sm">Shop.co © 2000-2023, All Rights Reserved</span>
-      <div class="flex xl:gap-3 justify-between items-baseline h-8 overflow-hidden">
+      <div class="flex lg:gap-3 justify-between items-baseline h-8 overflow-hidden">
         <img src="./svg/visa_icon.svg" class="-mt-1.5"/>
         <img src="./svg/mastercard_icon.svg" class="-mt-1.5"/>
         <img src="./svg/paypal_icon.svg" class="-mt-1.5"/>

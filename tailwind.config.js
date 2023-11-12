@@ -13,6 +13,8 @@ module.exports = {
         'gray40%':'#00000066',
         'halfblack':'#00000080',
         'lightblack':'#0000000F',
+        'navy':'#000080FF',
+        'dark':'#3A3B3CFF',
         'green':'#00C12BFF',
         'red':'#F50606',
         'textred':'#FF3333',
@@ -23,8 +25,6 @@ module.exports = {
         'blue':'#063AF5',
         'purple':'#7D06F5',
         'pink':'#F506A4',
-        'navy':'#000080',
-        'dark':'#3A3B3C'
       },
       fontFamily:{
         logo:['Avenir'],
